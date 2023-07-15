@@ -1,5 +1,6 @@
 package com.nopcommerce.demo.testng;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
@@ -17,8 +18,9 @@ public class TestNGRetryFailedDemo {
         System.out.println("I am in test2");
     }
 
-    @Test
+    @Test(retryAnalyzer = RetryAnalyser.class)
     public void test3(){
         System.out.println("I am in test3");
+        Assert.assertTrue(false);
     }
 }

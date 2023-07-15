@@ -7,6 +7,7 @@ import com.nopcommerce.demo.utilities.Utility;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
@@ -20,7 +21,8 @@ public class LoginTestWithParameterAndParallel extends Utility {
     String browser = PropertyReader.getInstance().getProperty("browser");
 
     @BeforeMethod
-    public void setUp(){
+    @Parameters("browserName")
+    public void setUp(String browser){
         selectBrowser(browser);
     }
 
