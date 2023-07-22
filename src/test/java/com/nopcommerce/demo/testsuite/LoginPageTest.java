@@ -14,7 +14,7 @@ public class LoginPageTest extends BaseTest {
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
 
-    @Test
+    @Test()
     public void verifyUserShouldNavigateToLoginPageSuccessfully(){
         homePage.clickOnLoginLink();
         String expectedText = "Welcome, Please Sign In";
